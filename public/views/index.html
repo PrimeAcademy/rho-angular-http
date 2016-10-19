@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
   </head>
-  <body>
-    <h1>Hello worlds?</h1>
+  <body ng-app="httpApp" ng-controller="MainController as main">
+    {{ main.message }}
+
+    <ul>
+      <li ng-repeat="monster in main.monsters">{{monster}}</li>
+    </ul>
   </body>
 </html>
